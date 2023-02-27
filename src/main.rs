@@ -38,3 +38,19 @@ fn test_array_product() {
     assert_eq!(array_product(&arr2), [2, 3, 6]);
     assert_eq!(array_product(&arr3), [30, 24, 20]);
 } 
+
+#[cfg(test)]
+mod test {
+    use super::*;
+
+    #[test]
+    fn test_array_product() {
+        let arr1 = [1, 2, 3, 4, 5];
+        let arr2 = [3, 2, 1];
+        let arr3 = [4, 5, 6];
+    
+        assert_eq!(array_product(&arr1), [120, 60, 40, 30, 24]);
+        assert_eq!(array_product(&arr2), [2, 3, 6]);
+        assert_eq!(array_product(&arr3), [30, 24, 20]);
+    }
+}
